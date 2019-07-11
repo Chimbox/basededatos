@@ -78,6 +78,7 @@ public class RegistroMarca extends javax.swing.JDialog {
         jLabel3.setText("Nombre");
 
         jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setColumns(20);
         jTextField1.setText("1");
 

@@ -107,6 +107,7 @@ public class RegistroUsuario extends javax.swing.JDialog {
         jLabel6.setText("Contraseña");
 
         jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setColumns(20);
         jTextField1.setText("E0001");
 

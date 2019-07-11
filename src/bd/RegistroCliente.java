@@ -96,6 +96,7 @@ public class RegistroCliente extends javax.swing.JDialog {
         jLabel7.setText("Ciudad");
 
         jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
         jTextField1.setColumns(20);
         jTextField1.setText("C0001");
 

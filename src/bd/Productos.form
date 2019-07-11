@@ -192,12 +192,12 @@
                           <Data value="Duncan Hines"/>
                           <Data value="Krispy Kreme"/>
                         </Column>
-                        <Column editable="true" title="Descripci&#xf3;n" type="java.lang.String">
-                          <Data value="Caf&#xe9; Nescaf&#xe9; en grano paquete grande 10kg"/>
-                          <Data value="Az&#xfa;car Zulka Empacada"/>
-                          <Data value="Harina de Ma&#xed;z Maseca"/>
-                          <Data value="Harina para preparar pastel amarillo cl&#xe1;sico"/>
-                          <Data value="Paquete de 6 donas"/>
+                        <Column editable="true" title="Existencia" type="java.lang.String">
+                          <Data value="30"/>
+                          <Data value="13"/>
+                          <Data value="28"/>
+                          <Data value="14"/>
+                          <Data value="4"/>
                         </Column>
                         <Column editable="true" title="Tama&#xf1;o" type="java.lang.String">
                           <Data value="10kg"/>

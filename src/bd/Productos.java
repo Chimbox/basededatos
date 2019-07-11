@@ -60,14 +60,14 @@ public class Productos extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"100", "Café grano 10kg", "$500", "Nescafé", "Café Nescafé en grano paquete grande 10kg", "10kg"},
-                {"330", "Azúcar Morena", "$58.30", "Zulka", "Azúcar Zulka Empacada", "2kg"},
-                {"210", "Harina 5kg", "$35.99", "Maseca", "Harina de Maíz Maseca", "5kg"},
-                {"644", "Harina para Pastel", "$40", "Duncan Hines", "Harina para preparar pastel amarillo clásico", "432g"},
-                {"215", "Paquete donas", "$32.50", "Krispy Kreme", "Paquete de 6 donas", "60g"}
+                {"100", "Café grano 10kg", "$500", "Nescafé", "30", "10kg"},
+                {"330", "Azúcar Morena", "$58.30", "Zulka", "13", "2kg"},
+                {"210", "Harina 5kg", "$35.99", "Maseca", "28", "5kg"},
+                {"644", "Harina para Pastel", "$40", "Duncan Hines", "14", "432g"},
+                {"215", "Paquete donas", "$32.50", "Krispy Kreme", "4", "60g"}
             },
             new String [] {
-                "ID", "Nombre", "Precio", "Marca", "Descripción", "Tamaño"
+                "ID", "Nombre", "Precio", "Marca", "Existencia", "Tamaño"
             }
         ) {
             Class[] types = new Class [] {
