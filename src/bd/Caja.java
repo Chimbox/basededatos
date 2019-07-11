@@ -155,6 +155,7 @@ public class Caja extends javax.swing.JDialog {
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
+        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(jList1);
 
         jLabel9.setFont(new java.awt.Font("Verdana", 0, 15)); // NOI18N
