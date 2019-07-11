@@ -60,18 +60,18 @@ public class Productos extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"100", "Café grano 10kg", "$500", "Nescafé", "30", "10kg"},
-                {"330", "Azúcar Morena", "$58.30", "Zulka", "13", "2kg"},
-                {"210", "Harina 5kg", "$35.99", "Maseca", "28", "5kg"},
-                {"644", "Harina para Pastel", "$40", "Duncan Hines", "14", "432g"},
-                {"215", "Paquete donas", "$32.50", "Krispy Kreme", "4", "60g"}
+                {"100", "Café grano 10kg", "$500", "Nescafé", "Café Nescafé en grano paquete grande", "30", "10kg"},
+                {"330", "Azúcar Morena", "$58.30", "Zulka", "Azúcar estándar de 2 kg la bolsa de la marca Zulka.", "13", "2kg"},
+                {"210", "Harina 5kg", "$35.99", "Maseca", "Harina de Maíz Maseca", "28", "5kg"},
+                {"644", "Harina para Pastel", "$40", "Duncan Hines", "Harina para preparar pastel", "14", "432g"},
+                {"215", "Paquete donas", "$32.50", "Krispy Kreme", "Paquete de 6 donas dif. sabores", "4", "60g"}
             },
             new String [] {
-                "ID", "Nombre", "Precio", "Marca", "Existencia", "Tamaño"
+                "ID", "Nombre", "Precio", "Marca", "Descripción", "Existencia", "Tamaño"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -79,6 +79,16 @@ public class Productos extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(0).setMaxWidth(50);
+            jTable1.getColumnModel().getColumn(2).setMinWidth(100);
+            jTable1.getColumnModel().getColumn(2).setMaxWidth(100);
+            jTable1.getColumnModel().getColumn(5).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(5).setMaxWidth(80);
+            jTable1.getColumnModel().getColumn(6).setMinWidth(50);
+            jTable1.getColumnModel().getColumn(6).setMaxWidth(100);
+        }
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Filtrar por:");
