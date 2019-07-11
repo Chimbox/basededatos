@@ -101,15 +101,22 @@ public class RegistroCliente extends javax.swing.JDialog {
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Ciudad");
 
+        jTextField1.setEditable(false);
         jTextField1.setColumns(20);
+        jTextField1.setText("C0001");
 
         jTextField2.setColumns(20);
+        jTextField2.setText("Javier Rojano Reina");
 
         jTextField4.setColumns(20);
+        jTextField4.setText("6441928310");
 
         jTextField5.setColumns(20);
+        jTextField5.setText("Las haciendas");
 
+        jTextField6.setEditable(false);
         jTextField6.setColumns(20);
+        jTextField6.setText("$0.00");
 
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/cancelar.png"))); // NOI18N
         botonCancelar.setText("Cancelar");
@@ -129,28 +136,26 @@ public class RegistroCliente extends javax.swing.JDialog {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(subPanelLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
+                .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addGap(22, 22, 22)
                 .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(subPanelLayout.createSequentialGroup()
-                        .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(22, 22, 22)
-                        .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(subPanelLayout.createSequentialGroup()
-                        .addComponent(botonAceptar)
-                        .addGap(101, 101, 101)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+                        .addComponent(jTextField4)
+                        .addComponent(jTextField5)
+                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, subPanelLayout.createSequentialGroup()
                         .addComponent(botonCancelar)
-                        .addGap(69, 69, 69)))
+                        .addGap(44, 44, 44)
+                        .addComponent(botonAceptar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         subPanelLayout.setVerticalGroup(

@@ -9,12 +9,12 @@ package bd;
  *
  * @author anniy
  */
-public class CatalogoUsuarios extends javax.swing.JDialog {
+public class CatalogoVentas extends javax.swing.JDialog {
 
     /**
      * Creates new form CatalogoUsuarios
      */
-    public CatalogoUsuarios(java.awt.Frame parent, boolean modal) {
+    public CatalogoVentas(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -30,16 +30,16 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         subPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,45 +47,37 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
 
         subPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setText("Filtrar por:");
+
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nombre", "ID", "Precio", "Marca", "Descripción", "Tamaño" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cajero", "Folio" }));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/search.png"))); // NOI18N
         jButton1.setText("Buscar");
 
-        jButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/add.png"))); // NOI18N
-        jButton2.setText("Agregar");
-
-        jButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/update.png"))); // NOI18N
-        jButton3.setText("Actualizar");
-
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 51));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/productos.png"))); // NOI18N
-        jLabel1.setText("Usuarios");
-
-        jButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/remove.png"))); // NOI18N
-        jButton4.setText("Eliminar");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/ventas.png"))); // NOI18N
+        jLabel1.setText("Ventas");
 
         jTable2.setForeground(new java.awt.Color(0, 51, 51));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"E0001", "HUGO", "RIVERA VAZQUEZ", "RIVH930623J84", "20000", "SONORA", "CABORCA", "83610", "82", "124", "AVIACION", "6441295658"},
-                {"E0002", "EDGAR EDUARDO", "ANGULO CÓRDOVA", "AUCE870313CR9", "18000", "SINALOA", "AHOME", "81200", "Callejón Municipal", "153", "Primer cuardo", "6442295949"},
-                {"E0003", "IRINA DE JESÚS", "COBOS MERCADO", "COMI8909271EA", "18500", "SONORA", "NAVOJOA", "85890", "Dr. Paliza", "19", "Fraccionamiento Sonora", "6441547449"},
-                {"E0004", "ANGELA JANETH", "LOPEZ LEON", "LOLA950211JW8", "17000", "SINALOA", "GUASAVE", "81014", "Avenida México", "40", "2 de octubre", "6441897582"},
-                {"E0005", "ALIMELY", "IBARRA SALGUEIRO", "IASA8610228JA", "17500", "SONORA", "CAJEME", "85099", "Obrero Mundial", "2410", "Las Misiones", "6442587612"}
+                {"A0000001", "Alimely Ibarra Salgueiro", "$122.10", "02-10-2018"},
+                {"A0000002", "Hugo Rivera Vazquez", "$329.90", "03-10-2018"},
+                {"A0000003", "Angela Janeth Lopez Leon", "$102.20", "03-10-2018"},
+                {"A0000004", "Hugo Rivera Vazquez", "$82.00", "04-10-2018"},
+                {"A0000005", "Edgar Eduardo Angulo Cordova", "$39.30", "04-10-2018"},
+                {"A0000006", "Irina de Jesus Cobos Mercado", "$101.50", "05-10-2018"}
             },
             new String [] {
-                "ID", "Nombre", "Apellidos", "RFC", "Sueldo", "Estado", "Localidad", "C. P.", "Calle", "Número", "Colonia", "Teléfono"
+                "Folio", "Cajero", "Total", "Fecha"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -94,11 +86,18 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
         });
         jScrollPane3.setViewportView(jTable2);
 
-        jTextField1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        jTextField1.setText("Hugo Rivera");
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Filtrar por:");
+        jLabel3.setText("Ordenar por:");
+
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fecha", "Total" }));
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bd/img/back.png"))); // NOI18N
+        jButton2.setText("Regresar");
+
+        jTextField1.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        jTextField1.setText("Edgar Eduardo");
 
         javax.swing.GroupLayout subPanelLayout = new javax.swing.GroupLayout(subPanel);
         subPanel.setLayout(subPanelLayout);
@@ -107,56 +106,48 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
             .addGroup(subPanelLayout.createSequentialGroup()
                 .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(subPanelLayout.createSequentialGroup()
-                        .addGap(351, 351, 351)
-                        .addComponent(jLabel1))
-                    .addGroup(subPanelLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addComponent(jLabel3)
-                        .addGap(28, 28, 28)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton1)))
-                .addGap(0, 119, Short.MAX_VALUE))
-            .addGroup(subPanelLayout.createSequentialGroup()
-                .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(subPanelLayout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4))
-                    .addGroup(subPanelLayout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 913, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                        .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(subPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(64, 64, 64)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 913, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2)))
+                    .addGroup(subPanelLayout.createSequentialGroup()
+                        .addGap(386, 386, 386)
+                        .addComponent(jLabel1)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         subPanelLayout.setVerticalGroup(
             subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(subPanelLayout.createSequentialGroup()
                 .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(subPanelLayout.createSequentialGroup()
-                        .addGap(67, 67, 67)
+                        .addGap(74, 74, 74)
                         .addComponent(jLabel1)
-                        .addGap(58, 58, 58)
+                        .addGap(56, 56, 56)
                         .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, subPanelLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(159, 159, 159)
                         .addComponent(jButton1)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(subPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(jButton2))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -173,7 +164,7 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(subPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -207,20 +198,23 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CatalogoUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CatalogoVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CatalogoUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CatalogoVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CatalogoUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CatalogoVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CatalogoUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CatalogoVentas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CatalogoUsuarios dialog = new CatalogoUsuarios(new javax.swing.JFrame(), true);
+                CatalogoVentas dialog = new CatalogoVentas(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -235,10 +229,10 @@ public class CatalogoUsuarios extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
